@@ -1,0 +1,508 @@
+:root {
+    --purple: #8e44ad;
+    --red: #c0392b;
+    --orange: #f39c12;
+    --black: #333;
+    --white: #fff;
+    --light-color: #666;
+    --light-white: #ccc;
+    --light-bg: #f5f5f5;
+    --border: .1rem solid var(--black);
+    --box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+    scroll-padding-top: 6rem;
+    overflow-x: hidden;
+}
+
+*::selection {
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+*::-webkit-scrollbar {
+    height: .5rem;
+    width: 1rem;
+}
+
+*::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--purple);
+}
+
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+section {
+    padding: 2rem 9%;
+    background: #8D7B68;
+}
+
+.empty {
+    padding: 1.5rem;
+    text-align: center;
+    border: var(--border);
+    background-color: var(--white);
+    color: var(--red);
+    font-size: 2rem;
+}
+
+.message {
+    position: sticky;
+    top: 0;
+    margin: 0 auto;
+    max-width: 1200px;
+    background-color: var(--white);
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10000;
+    gap: 1.5rem;
+}
+
+.message span {
+    font-size: 2rem;
+    color: var(--black);
+}
+
+.message i {
+    cursor: pointer;
+    color: var(--red);
+    font-size: 2.5rem;
+}
+
+.message i:hover {
+    transform: rotate(90deg);
+}
+
+.title {
+    text-align: center;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+    color: var(--black);
+    font-size: 4rem;
+}
+
+.btn,
+.option-btn,
+.delete-btn,
+.white-btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    color: var(--white);
+    font-size: 1.8rem;
+    border-radius: .5rem;
+    text-transform: capitalize;
+}
+
+.btn:hover,
+.option-btn:hover,
+.delete-btn:hover {
+    background-color: var(--black);
+}
+
+.white-btn,
+.btn {
+    background-color: var(--purple);
+}
+
+.option-btn {
+    background-color: black;
+}
+
+.delete-btn {
+    background-color: var(--red);
+}
+
+.white-btn:hover {
+    background-color: var(--white);
+    color: var(--black);
+}
+
+.heading {
+    text-align: center;
+    font-size: 2rem;
+    color: black;
+    padding: 1rem;
+    margin: 2rem 0;
+    background: #8D7B68;
+}
+
+.heading span {
+    color: azure;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translateY(1rem);
+        opacity: .2s;
+    }
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    border-radius: 1rem;
+    background: black;
+    color: azure;
+    padding: .8rem 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn:hover {
+    background: olive;
+}
+
+.header .header-1 {
+    background-color: #8D7B68;
+}
+
+.header .header-1 .flex {
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.header .header-2 {
+    background-color: #C8B6A6;
+    box-shadow: var(--box-shadow);
+
+}
+
+.header .header-2.active {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.header .header-2 .flex {
+    padding: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.header .header-1 .flex .share a {
+    font-size: 1.5rem;
+    margin-right: 1.5rem;
+    color: var(--black);
+}
+
+.header .header-1 .flex .share a:hover {
+    color: olive;
+}
+
+.header .header-1 .flex p {
+    font-size: 1.3rem;
+    color: black;
+}
+
+.header .header-1 .flex p a {
+    color: blue;
+}
+
+.header .header-1 .flex p a:hover {
+    text-decoration: underline;
+}
+
+.header .header-2 .flex .navbar a {
+    margin: 0 1rem;
+    font-size: 2rem;
+    color: black;
+}
+
+.header .header-2 .flex .navbar a:hover {
+    color: olive;
+    text-decoration: underline;
+}
+
+.header .header-2 .flex .dropdown-menu {
+    font-size: 1.5rem;
+    font-family: cursive;
+}
+
+.header .header-2 .flex .icons>* {
+    font-size: 2.5rem;
+    color: var(--black);
+    cursor: pointer;
+    margin-left: 1.5rem;
+}
+
+.header .header-2 .flex .icons>*:hover {
+    color: olive;
+}
+
+#menu-btn {
+    display: none;
+}
+
+.header .header-2 .flex .user-box {
+    position: absolute;
+    top: 120%;
+    right: 2rem;
+    width: 25rem;
+    box-shadow: var(--box-shadow);
+    border-radius: .5rem;
+    padding: 2rem;
+    text-align: center;
+    border-radius: .5rem;
+    border: var(--border);
+    background-color: var(--white);
+    display: none;
+    animation: fadeIn .2s linear;
+}
+
+.header .header-2 .flex .user-box.active {
+    display: inline-block;
+}
+
+.header .header-2 .flex .user-box p {
+    font-size: 2rem;
+    color: var(--light-color);
+    margin-bottom: 1.5rem;
+}
+
+.header .header-2 .flex .user-box p span {
+    color: black;
+}
+
+.header .header-2 .flex .user-box .delete-btn {
+    margin-top: 0;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    background-color: olive;
+    color: black;
+}
+
+.about .row {
+    align-items: center;
+    gap: 2rems;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    padding-bottom: 2rem;
+}
+
+.about .row .image-container {
+    flex: 1 1 30rem;
+    position: relative;
+}
+
+.about .row .image-container img {
+    width: 100%;
+    border: 1.5rem solid #8D7B68;
+    border-radius: .5rem;
+    height: 100%;
+    box-shadow: 0 .5rem 1rem rgb(0, 0, 0, .1);
+    object-fit: cover;
+    padding-top: 2rem;
+}
+
+.about .row .image-container h3 {
+    position: absolute;
+    top: 90%;
+    font-size: 2rem;
+    color: black;
+    background-color: #8D7B68;
+    width: 100%;
+    padding: 1rem 2rem;
+    text-align: center;
+    mix-blend-mode: normal;
+}
+
+.about .row .content {
+    flex: 1 1 40rem;
+}
+
+.about .row .content h2 {
+    font-size: 3rem;
+    color: black;
+    text-align: center;
+}
+
+.about .row .content p {
+    font-size: 1.5rem;
+    color: azure;
+    padding: .5rem 0;
+    padding-top: 1rem;
+    padding-left: 4rem;
+    line-height: 1.5;
+    text-indent: 10%;
+    text-align: justify;
+
+}
+
+.about .row .content h3 {
+    text-align: justify;
+    text-align: center;
+    font-size: 1.5rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.about .content a {
+    display: inline;
+    color: black;
+    font-size: 1.5rem;
+    padding: 8.9rem;
+}
+
+.about .content a:hover {
+    color: olive;
+}
+
+.footer {
+    background-color: #C8B6A6;
+
+}
+
+.footer .top {
+    text-decoration: none;
+    padding: 10px;
+    font-family: sans-serif;
+    color: #fff;
+    background: #000;
+    border-radius: 100px;
+    float: right;
+    margin-top: -1rem;
+}
+
+.footer .top:hover {
+    background-color: olive;
+}
+
+.footer .copyright {
+    font-size: 1rem;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: black;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* media queries */
+@media (max-width:991px) {
+
+    html {
+        font-size: 55%;
+    }
+
+    header {
+        padding: 2rem;
+    }
+
+    section {
+        padding: 2rem;
+    }
+
+    .home {
+        background-position: left;
+    }
+}
+
+@media (max-width:768px) {
+
+    header .fa-bars {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        background: #eee;
+        top: 100%;
+        right: 0;
+        left: 0;
+        border-top: .1rem solid rgb(0, 0, 0, .1);
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header #toggler:checked~.navbar {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+
+    header .navbar a {
+        margin: 1.5rem;
+        padding: 1.5rem;
+        background: #fff;
+        border: .1rem solid rgb(0, 0, 0, .1);
+        display: block;
+    }
+
+    .home .content h3 {
+        font-size: 5rem;
+    }
+
+    .home .content span {
+        font-size: 2.5rem;
+    }
+
+    .icons-container .icons h3 {
+        font-size: 2rem;
+    }
+
+    .icons-container .icons span {
+        font-size: 1.7rem;
+    }
+}
+
+@media (max-width: 450px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    .heading {
+        font-size: 3rem;
+    }
+}
