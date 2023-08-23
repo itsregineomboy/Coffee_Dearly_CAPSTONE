@@ -20,7 +20,7 @@ header('location:login_form.php');
     <title>Admin Dashboard</title>
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/admin_style.css">
+    <link rel="stylesheet" href="admin_style.css">
 
     <!-- font awesome cdn link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -43,6 +43,14 @@ header('location:login_form.php');
                 ?>
                 <h3><?php echo $number_of_products; ?></h3>
                 <p>Products added</p>
+            </div>
+            <div class="box">
+                <?php 
+            $select_orders = mysqli_query($conn, "SELECT * FROM `orders`") or die('query failed');
+            $number_of_orders = mysqli_num_rows($select_orders);
+                ?>
+                <h3><?php echo $number_of_orders; ?></h3>
+                <p>Successfull Orders</p>
             </div>
             <div class="box">
                 <?php 

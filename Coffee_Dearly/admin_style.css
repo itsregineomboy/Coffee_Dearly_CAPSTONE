@@ -355,53 +355,47 @@ section {
     background-color: azure;
 }
 
-.show-products .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 40rem);
-    justify-content: center;
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: flex-start;
-}
-
 .show-products {
-    padding-top: 0;
-}
-
-.show-products .box-container .box {
-    text-align: center;
-    padding: 2rem;
-    border-radius: .5rem;
-    border: var(--border);
-    box-shadow: var(--box-shadow);
-    background-color: #C8B6A6;
-}
-
-.show-products .box-container .box img {
-    height: 30rem;
-}
-
-.show-products .box-container .box .name {
-    padding: 1rem 0;
+    background-color: #fff;
     font-size: 2rem;
-    color: var(--black);
 }
 
-.show-products .box-container .box .price {
-    padding: 1rem 0;
-    font-size: 2rem;
-    color: black;
+.show-products .box-table {
+    width: 100%;
+    text-align: left;
 }
 
-.show-products .box-container .box a {
+.show-products .box-table td {
+    padding: 0.5rem;
+    font-size: 2.5rem;
+    border-bottom: var(--border);
+}
+
+.show-products .box-table td img {
+    float: left;
+    padding: 10%;
+}
+
+.show-products .box-table td .option-btn {
     background-color: olive;
     color: black;
+    float: right;
 }
 
-.show-products .box-container .box a:hover {
-    background-color: #fff;
+.show-products .box td .option-btn:hover {
+    background-color: #ccc;
 }
+
+.show-products .box-table td .delete-btn {
+    background-color: olive;
+    color: black;
+    float: right;
+}
+
+.show-products .box td .delete-btn:hover {
+    background-color: #ccc;
+}
+
 
 .edit-product-form {
     min-height: 100vh;
@@ -461,93 +455,104 @@ section {
     background-color: #fff;
 }
 
-.orders .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 30rem);
-    justify-content: center;
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: flex-start;
-}
-
-.orders .box-container .box {
-    background-color: var(--white);
-    padding: 2rem;
-    border: var(--border);
-    box-shadow: var(--box-shadow);
-    border-radius: .5rem;
-}
-
-.orders .box-container .box p {
-    padding-bottom: 1rem;
-    font-size: 2rem;
-    color: var(--light-color);
-}
-
-.orders .box-container .box p span {
-    color: var(--purple);
-}
-
-.orders .box-container .box form {
-    text-align: center;
-}
-
-.orders .box-container .box form select {
-    border-radius: .5rem;
-    margin: .5rem 0;
-    width: 100%;
-    background-color: var(--light-bg);
-    border: var(--border);
-    padding: 1.2rem 1.4rem;
-    font-size: 1.8rem;
-    color: var(--black);
-}
-
-.users .box-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, 30rem);
-    justify-content: center;
-    gap: 1.5rem;
-    max-width: 1200px;
-    margin: 0 auto;
-    align-items: flex-start;
-}
-
-.users .box-container .box {
-    background-color: #C8B6A6;
-    padding: 1rem;
-    border: var(--border);
-    box-shadow: var(--box-shadow);
-    border-radius: .5rem;
-    text-align: center;
-}
-
-.users .box-container .box p {
-    padding-bottom: 1.5rem;
-    font-size: 1.5rem;
-    text-align: justify;
+.orders {
+    margin: 2rem 0;
 
 }
 
-.users .box-container .box p span {
-    color: azure;
-    font-size: 1.5rem;
-
-}
-
-.users .box-container .box .delete-btn {
-    margin-top: 0;
-    color: black;
-    background-color: olive;
-    padding: 0.5rem;
-    font-size: 1.5rem;
-}
-
-.users .box-container .box .delete-btn:hover {
+.orders h2 {
     background-color: #fff;
+    color: black;
+    padding: 1rem;
+    margin-bottom: 2rem;
 }
 
+.orders .box-table {
+    width: 100%;
+    text-align: center;
+}
+
+.orders .box-table thead {
+    background: #C8B6A6;
+}
+
+.orders .box-table th {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.orders .box-table td {
+    padding: 1rem;
+    font-size: 2rem;
+
+}
+
+
+.orders .box-table td .option-btn {
+    background-color: olive;
+    color: black;
+    float: right;
+    font-size: 1.5rem;
+    padding: 1rem;
+
+}
+
+.orders .box td .option-btn:hover {
+    background-color: #ccc;
+}
+
+.orders .box-table td .delete-btn {
+    background-color: olive;
+    color: black;
+    float: right;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.orders .box td .delete-btn:hover {
+    background-color: #ccc;
+}
+
+.users {
+    margin: 2rem 0;
+
+}
+
+.users h2 {
+    background-color: #fff;
+    color: black;
+    padding: 1rem;
+    margin-bottom: 2rem;
+}
+
+.users .box-table {
+    width: 100%;
+    text-align: center;
+}
+
+.users .box-table th {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.users .box-table td {
+    padding: 0.5rem;
+    font-size: 2rem;
+    text-align: center;
+    border-bottom: var(--border);
+}
+
+.users .box-table td .delete-btn {
+    background-color: olive;
+    color: black;
+    float: right;
+    font-size: 1.5rem;
+    padding: 1rem;
+}
+
+.users .box td .delete-btn:hover {
+    background-color: #ccc;
+}
 
 
 

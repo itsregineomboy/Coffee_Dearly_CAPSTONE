@@ -2,8 +2,7 @@
 
     <div class="flex">
         <img src="images/Coffee Dearly IG Profile (1).png" height="100px" width="100px">
-        <a href="admin_page.php" class="logo">Admin<span>Panel</span></a>
-
+        <a href="admin_page.php" class="logo">ADMIN<span> PANEL</span></a>
         <nav class="navbar">
             <a href="admin_page.php">Home</a>
             <a href="admin_products.php">Products</a>

@@ -31,7 +31,7 @@ header('location:admin_users.php');
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
     <!-- custom admin css file link  -->
-    <link rel="stylesheet" href="css/admin_style.css">
+    <link rel="stylesheet" href="admin_style.css">
 
 </head>
 
@@ -41,7 +41,7 @@ header('location:admin_users.php');
 
     <section class="users">
 
-        <h1 class="title"> User accounts </h1>
+        <h2 class="title"> User accounts </h2>
 
         <div class="box-container">
             <?php
@@ -49,14 +49,31 @@ header('location:admin_users.php');
         while($fetch_users = mysqli_fetch_assoc($select_users)){
     ?>
             <div class="box">
-                <p> user id : <span><?php echo $fetch_users['id']; ?></span></p>
-                <p> username : <span><?php echo $fetch_users['name']; ?></span></p>
-                <p> email : <span><?php echo $fetch_users['email']; ?></span></p>
-                <p> user type : <span
-                        style="color:<?php if($fetch_users['user_type'] == 'admin'){ echo 'var(--blue)'; } ?>"><?php echo $fetch_users['user_type']; ?></span>
-                </p>
-                <a href="admin_users.php?delete=<?php echo $fetch_users['id']; ?>"
-                    onclick="return confirm('Delete this user?');" class="delete-btn">Delete user</a>
+                <table class="box-table">
+                    <thead>
+                        <tr>
+                            <td>
+                                <p><span><?php echo $fetch_users['id']; ?></span></p>
+                            </td>
+                            <td>
+                                <p><span><?php echo $fetch_users['name']; ?></span></p>
+                            </td>
+                            <td>
+                                <p><span><?php echo $fetch_users['email']; ?></span></p>
+                            </td>
+                            <td>
+                                <p><span
+                                        style="color:<?php if($fetch_users['user_type'] == 'admin'){ echo 'var(--blue)'; } ?>"><?php echo $fetch_users['user_type']; ?></span>
+                                </p>
+                            </td>
+                            <td>
+                                <a href="admin_users.php?delete=<?php echo $fetch_users['id']; ?>"
+                                    onclick="return confirm('Delete this user?');" class="delete-btn">Delete user</a>
+                            </td>
+                        </tr>
+                    </thead>
+
+                </table>
             </div>
             <?php
         };

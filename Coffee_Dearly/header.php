@@ -32,6 +32,7 @@ foreach($message as $message){
                 <a href="home.php">HOME</a>
                 <a href="meet_the_founder.php">ABOUT</a>
                 <a href="shop.php">SHOP</a>
+                <a href="myorders.php">ORDERS</a>
                 <a href="#">CONTACT</a>
             </nav>
 
@@ -54,7 +55,7 @@ foreach($message as $message){
                $select_cart_number = mysqli_query($conn, "SELECT * FROM `cart` WHERE user_id = '$user_id'") or die('query failed');
                 $cart_rows_number = mysqli_num_rows($select_cart_number); 
             ?>
-                <a href="#"> <i class="fas fa-shopping-cart"></i> <span>(<?php echo $cart_rows_number; ?>)</span>
+                <a href="cart.php"><i class="fas fa-shopping-cart"></i> <span>(<?php echo $cart_rows_number; ?>)</span>
                 </a>
             </div>
 

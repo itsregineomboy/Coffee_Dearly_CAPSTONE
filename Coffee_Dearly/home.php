@@ -47,7 +47,7 @@ if(mysqli_num_rows($check_cart_numbers) > 0){
     </script>
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="user_style.css">
+    <link rel="stylesheet" href="css/style.css">
 
     <!-- font awesome cdn link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -164,7 +164,7 @@ if(mysqli_num_rows($check_cart_numbers) > 0){
     <!--product section starts-->
     <section class="products">
 
-        <h2 class="title">Latest Products</h2>
+        <h2 class="title">Featured Products</h2>
 
         <div class="box-container">
 
@@ -174,7 +174,8 @@ if(mysqli_num_rows($check_cart_numbers) > 0){
             while($fetch_products = mysqli_fetch_assoc($select_products)){
     ?>
             <form action="" method="post" class="box">
-                <img class="image" src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="">
+                <img class="image" src="uploaded_img/<?php echo $fetch_products['image']; ?> " height="300rem"
+                    width="300rem" alt="">
                 <div class="name"><?php echo $fetch_products['name']; ?></div>
                 <div class="price">₱<?php echo $fetch_products['price']; ?></div>
                 <input type="number" min="1" name="product_quantity" value="1" class="qty">
@@ -186,7 +187,7 @@ if(mysqli_num_rows($check_cart_numbers) > 0){
             <?php
     }
     }else{
-        echo '<p class="empty">no products added yet!</p>';
+        echo '<p class="empty">No products added yet!</p>';
     }
     ?>
         </div>
@@ -200,7 +201,7 @@ if(mysqli_num_rows($check_cart_numbers) > 0){
     <!-- contact section starts -->
 
     <section class="contact" id="contact">
-        <h1 class="heading"><span>CONTACT</span> US </h1>
+        <h1 class="heading"><span>CONTACT</span> US</h1>
         <div class="row">
 
             <form action="">

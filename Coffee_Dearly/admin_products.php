@@ -93,7 +93,7 @@ unlink('uploaded_img/'.$update_old_image);
     <title>Products</title>
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/admin_style.css">
+    <link rel="stylesheet" href="admin_style.css">
 
     <!-- font awesome cdn link-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
@@ -117,31 +117,38 @@ unlink('uploaded_img/'.$update_old_image);
 
     </section>
     <!--products CRUD section ends-->
+
     <!-- show products-->
     <section class="show-products">
 
-        <div class="box-container">
-
-            <?php
+        <?php
       $select_products = mysqli_query($conn, "SELECT * FROM `products`") or die('query failed');
     if(mysqli_num_rows($select_products) > 0){
         while($fetch_products = mysqli_fetch_assoc($select_products)){
 ?>
-            <div class="box">
-                <img src="uploaded_img/<?php echo $fetch_products['image']; ?>" alt="">
-                <div class="name"><?php echo $fetch_products['name']; ?></div>
-                <div class="price">₱<?php echo $fetch_products['price']; ?>/-</div>
-                <a href="admin_products.php?update=<?php echo $fetch_products['id']; ?>" class="option-btn">Update</a>
-                <a href="admin_products.php?delete=<?php echo $fetch_products['id']; ?>" class="delete-btn"
-                    onclick="return confirm('delete this product?');">Delete</a>
-            </div>
-            <?php
+        <div class="box">
+            <table class="box-table">
+                <td><img src="uploaded_img/<?php echo $fetch_products['image']; ?>" height="100" alt=""></td>
+                <td>
+                    <div class="name"><?php echo $fetch_products['name']; ?></div>
+                </td>
+                <td>
+                    <div class="price">₱<?php echo $fetch_products['price']; ?></div>
+                </td>
+                <td>
+                    <a href="admin_products.php?update=<?php echo $fetch_products['id']; ?>"
+                        class="option-btn">Update</a>
+                    <a href="admin_products.php?delete=<?php echo $fetch_products['id']; ?>" class="delete-btn"
+                        onclick="return confirm('delete this product?');">Delete</a>
+                </td>
+            </table>
+        </div>
+        <?php
         }
 }else{
     echo '<p class="empty">No products added yet!</p>';
 }
 ?>
-        </div>
     </section>
     <!-- show products ends-->
 

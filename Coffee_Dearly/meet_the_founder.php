@@ -150,7 +150,6 @@ if(mysqli_num_rows($check_cart_numbers) > 0){
     </section>
     <!--about section ends-->
 
-
     <!-- footer section starts-->
     <section class="footer">
         <div class="col-3"></div>
