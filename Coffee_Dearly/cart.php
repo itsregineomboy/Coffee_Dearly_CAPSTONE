@@ -103,7 +103,7 @@ echo '<p class="empty">Your cart is empty</p>';
             <h2>GRAND TOTAL: <span>₱<?php echo $grand_total; ?></span></h2>
             <div class="flex">
                 <a href="shop.php" class="option-btn">Continue shopping</a>
-                <a href="checkout.php" class="option-btn<?php echo ($grand_total > 1)?'':'disabled'; ?>">Proceed to
+                <a href="checkout.php" class="option-btn" <?php echo ($grand_total > 1)?'':'disabled'; ?>>Proceed to
                     Checkout</a>
             </div>
         </div>

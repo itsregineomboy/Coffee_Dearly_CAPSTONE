@@ -49,7 +49,6 @@ if(isset($_POST['submit'])){
 </head>
 
 <body>
-
     <div class="form-container">
 
         <form action="" method="post">

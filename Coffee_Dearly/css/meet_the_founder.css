@@ -66,35 +66,6 @@ section {
     font-size: 2rem;
 }
 
-.message {
-    position: sticky;
-    top: 0;
-    margin: 0 auto;
-    max-width: 1200px;
-    background-color: var(--white);
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 10000;
-    gap: 1.5rem;
-}
-
-.message span {
-    font-size: 2rem;
-    color: var(--black);
-}
-
-.message i {
-    cursor: pointer;
-    color: var(--red);
-    font-size: 2.5rem;
-}
-
-.message i:hover {
-    transform: rotate(90deg);
-}
-
 .title {
     text-align: center;
     margin-bottom: 2rem;
@@ -187,6 +158,23 @@ section {
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.header .header-1 .flex button {
+    padding: 1px 15px;
+    border: 1px solid #fff;
+    background: transparent;
+    border-radius: 20px;
+}
+
+.header .header-1 .flex button:active {
+    transform: scale(0.98);
+}
+
+.header .header-1 .flex button a {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
 }
 
 .header .header-2 {

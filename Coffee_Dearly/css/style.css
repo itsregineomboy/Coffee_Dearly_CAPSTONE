@@ -65,35 +65,6 @@ section {
     font-size: 2rem;
 }
 
-.message {
-    position: sticky;
-    top: 0;
-    margin: 0 auto;
-    max-width: 1200px;
-    background-color: var(--white);
-    padding: 2rem;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    z-index: 10000;
-    gap: 1.5rem;
-}
-
-.message span {
-    font-size: 2rem;
-    color: var(--black);
-}
-
-.message i {
-    cursor: pointer;
-    color: var(--red);
-    font-size: 2.5rem;
-}
-
-.message i:hover {
-    transform: rotate(90deg);
-}
-
 .title {
     text-align: center;
     margin-bottom: 2rem;
@@ -172,6 +143,23 @@ section {
     justify-content: space-between;
     max-width: 1200px;
     margin: 0 auto;
+}
+
+.header .header-1 .flex button {
+    padding: 1px 15px;
+    border: 1px solid #fff;
+    background: transparent;
+    border-radius: 20px;
+}
+
+.header .header-1 .flex button:active {
+    transform: scale(0.98);
+}
+
+.header .header-1 .flex button a {
+    font-size: 1.5rem;
+    color: #fff;
+    text-decoration: none;
 }
 
 .header .header-2 {
@@ -292,15 +280,16 @@ section {
 
 .home {
     display: flex;
+    background-image: url(../images/head.png);
     align-items: center;
     min-height: 80vh;
-    background: url(images/head.png) no-repeat;
     background-size: cover;
     background-position: center;
 }
 
 .home .content {
     max-width: 50rem;
+
 }
 
 .home .content h3 {
@@ -444,7 +433,10 @@ section {
 .products h2 {
     background: #eee;
     color: black;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1rem;
 }
 
 .products .box-container {
@@ -690,47 +682,53 @@ section {
     margin: 1rem 0;
 }
 
-.head h2 {
-    text-align: center;
-    text-transform: uppercase;
+
+.placed-orders {
+    background-color: #fff;
+}
+
+.placed-orders h2 {
     font-size: 2rem;
-    color: #fff;
-}
-
-.placed-orders .box-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 1.5rem;
-}
-
-.placed-orders .box-container .empty {
-    flex: 1;
+    background-color: #8D7B68;
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
 }
 
 .placed-orders .box-container .box {
     flex: 1 1 40rem;
-    border-radius: .5rem;
+    border-radius: 5rem;
     padding: 2rem;
     border: var(--border);
-    background-color: var(--light-bg);
-    padding: 1rem 2rem;
+}
+
+.placed-orders .box-container .box:hover {
+    text-shadow: 0px 0px 6px rgb(241, 172, 172);
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0, 0, 0, 0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(174, 237, 182, 0.57);
+    transition: all 0.4s ease 0s;
+
 }
 
 .placed-orders .box-container .box p {
     padding: 1rem 0;
     font-size: 2rem;
-    color: var(--light-color);
+    color: black;
 }
 
 .placed-orders .box-container .box p span {
-    color: var(--purple);
+    color: olive;
+}
+
+.heading h3 {
+    text-align: center;
+    font-size: 2.5rem;
+    padding: 2rem;
+    text-transform: uppercase;
 }
 
 .search-form form {
-    max-width: 1200px;
+    max-width: 100%;
     margin: 0 auto;
     display: flex;
     gap: 1rem;
@@ -744,10 +742,64 @@ section {
     width: 100%;
     padding: 1.2rem 1.4rem;
     border: var(--border);
-    font-size: 2rem;
+    font-size: 1.5rem;
     color: var(--black);
     background-color: var(--light-bg);
     border-radius: .5rem;
+}
+
+.result .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.result .box-container .box {
+    flex: 1 1 30rem;
+    box-shadow: 0 1rem 1.5rem rgb(0, 0, 0, .1);
+    border-radius: 1.5rem;
+    border: .1rem solid rgb(0, 0, 0, .1);
+    position: relative;
+    background: #fff;
+}
+
+.result .box-container .box .name {
+    padding: 1rem 0;
+    font-size: 2rem;
+    color: var(--black);
+    text-align: center;
+}
+
+.result .box-container .box .price {
+    font-size: 1.5rem;
+    color: olive;
+    font-weight: bolder;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.result .box-container .box .qty {
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+    border: var(--border);
+    font-size: 1.5rem;
+    margin: 1rem 2rem;
+}
+
+.result .box-container .box .image {
+    position: relative;
+    text-align: center;
+    padding-top: 2rem;
+    padding-left: 5.5rem;
+    overflow: hidden;
+    height: 25rem;
+}
+
+.result .box-container p {
+    font-size: 2rem;
+    text-align: center;
+    background-color: #8D7B68;
+    border: var(--white);
 }
 
 .contact {
@@ -904,6 +956,10 @@ section {
         font-size: 3.5rem;
     }
 
+    .home {
+        min-height: auto;
+    }
+
 }
 
 @media (max-width:450px) {
@@ -918,6 +974,10 @@ section {
 
     .title {
         font-size: 3rem;
+    }
+
+    .home {
+        min-height: auto;
     }
 
 }
