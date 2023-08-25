@@ -44,11 +44,12 @@ if(isset($_POST['submit'])){
     <title>register form</title>
 
     <!-- custom css file link  -->
-    <link rel="stylesheet" href="css/register-login_style.css">
+    <link rel="stylesheet" href="register-login_style.css">
 
 </head>
 
 <body>
+    <?php include 'registration_header.php'?>
     <div class="form-container">
 
         <form action="" method="post">

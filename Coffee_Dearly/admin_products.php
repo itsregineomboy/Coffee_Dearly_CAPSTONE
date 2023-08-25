@@ -24,7 +24,7 @@ if(isset($_POST['add_product'])){
     }else{
     $add_product_query = mysqli_query($conn, "INSERT INTO `products`(name, price, image) VALUES('$name', '$price', '$image')") or die('query failed');
 if($add_product_query){
-    if($image_size > 2000000){
+    if($image_size > 200000000){
 $message[] = 'Image size is too large';
 }else{
         move_uploaded_file($image_tmp_name, $image_folder);
@@ -126,6 +126,7 @@ unlink('uploaded_img/'.$update_old_image);
     if(mysqli_num_rows($select_products) > 0){
         while($fetch_products = mysqli_fetch_assoc($select_products)){
 ?>
+
         <div class="box">
             <table class="box-table">
                 <td><img src="uploaded_img/<?php echo $fetch_products['image']; ?>" height="100" alt=""></td>

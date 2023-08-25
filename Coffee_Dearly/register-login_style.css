@@ -8,6 +8,13 @@
     margin: 0;
 }
 
+.header {
+    max-width: 1200px;
+    margin: 0 3rem;
+    position: absolute;
+}
+
+
 .container {
     min-height: 100vh;
     display: flex;
@@ -64,11 +71,13 @@
 .form-container {
     min-height: 100vh;
     display: flex;
+    background: url(images/head.png) no-repeat center center fixed;
     align-items: center;
-    background-image: url(../images/Coffeebackqround.webp);
     justify-content: center;
-    padding: 20px;
-    padding-bottom: 60px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
 }
 
 .form-container form {

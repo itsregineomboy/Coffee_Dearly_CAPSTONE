@@ -206,6 +206,7 @@ section {
 }
 
 .header .header-1 .flex p a:hover {
+    background-color: olive;
     text-decoration: underline;
 }
 
@@ -213,11 +214,6 @@ section {
     margin: 0 1rem;
     font-size: 2rem;
     color: black;
-}
-
-.header .header-2 .flex .navbar a:hover {
-    color: olive;
-    text-decoration: underline;
 }
 
 .header .header-2 .flex .dropdown-menu {
@@ -452,6 +448,7 @@ section {
     border: .1rem solid rgb(0, 0, 0, .1);
     position: relative;
     background: #fff;
+    align-items: center;
 }
 
 .products .box-container .box .image {
@@ -461,6 +458,7 @@ section {
     padding-left: 5.5rem;
     overflow: hidden;
     height: 25rem;
+    align-items: center;
 }
 
 .products .box-container .box .name {

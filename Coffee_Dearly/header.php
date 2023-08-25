@@ -20,7 +20,7 @@ foreach($message as $message){
                 <a href="#" class="fab fa-instagram"></a>
                 <a href="#" class="fab fa-linkedin"></a>
             </div>
-            <button><a href="login_form.php">Login</a></button>
+            <button><a href="register_form.php">SIGNUP/LOGIN</a></button>
         </div>
     </div>
     <!--header 2-->
@@ -36,17 +36,6 @@ foreach($message as $message){
                 <a href="#">CONTACT</a>
             </nav>
 
-            <div class="dropdown">
-                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton1"
-                    data-bs-toggle="dropdown" aria-expanded="false">
-                    Shop by Roast </button>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                    <li><a class="dropdown-item" href="#">Blonde Roast</a></li>
-                    <li><a class="dropdown-item" href="#">Medium Roast</a></li>
-                    <li><a class="dropdown-item" href="#">Medium-Blonde Roast</a></li>
-                    <li><a class="dropdown-item" href="#">Dark Roast</a></li>
-                </ul>
-            </div>
             <div class="icons">
                 <div id="menu-btn" class="fas fa-bars"></div>
                 <a href="search_page.php" class="fas fa-search"></a>
@@ -61,7 +50,7 @@ foreach($message as $message){
             </div>
 
             <div class="user-box">
-                <p>username : <span><?php echo $_SESSION['user_name']; ?></span></p>
+                <p>Hi, <span><?php echo $_SESSION['user_name']; ?></span></p>
                 <a href="logout.php" class="delete-btn">Logout</a>
             </div>
         </div>
